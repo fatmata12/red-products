@@ -1,0 +1,7 @@
+.stats {
+  display: flex;           /* aligne horizontalement */
+  flex-wrap: wrap;         /* permet de passer à la ligne si l’écran est trop petit */
+  gap: 20px;               /* espace entre les cartes */
+  padding: 20px;
+  justify-content: flex-start; /* ou center si tu veux centrer tout le bloc */
+}
