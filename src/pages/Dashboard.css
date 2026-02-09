@@ -1,15 +1,49 @@
 .stats {
-  display: flex;              /* horizontal par défaut */
-  flex-wrap: wrap;            /* permet de passer à la ligne si nécessaire */
-  gap: 20px;                  /* espace entre les cartes */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 20px;
-  justify-content: flex-start; /* alignement des cartes sur la gauche */
+  justify-content: flex-start; /* ou center pour centrer toutes les cartes */
 }
 
-/* Media query pour les écrans plus petits */
+/* StatCard style */
+.stat-card {
+  flex: 1 1 180px;            /* largeur minimum 180px, s'étire si possible */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.stat-card .icon {
+  font-size: 2rem;
+}
+
+.stat-card .details h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.stat-card .details p {
+  margin: 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Responsive : mobile / tablette */
 @media (max-width: 768px) {
   .stats {
-    flex-direction: column;   /* cartes empilées verticalement */
+    flex-direction: column;
     gap: 15px;
   }
 }

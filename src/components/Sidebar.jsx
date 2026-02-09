@@ -53,7 +53,7 @@ function Sidebar() {
             }}
           >
             <FaHotel />
-            Liste des 8 hotels
+            Liste des  hotels
           </Link>
         </li>
       </ul>
