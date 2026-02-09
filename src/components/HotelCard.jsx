@@ -5,7 +5,7 @@ function HotelCard({ name, address, price, images }) {
             <div className="hotel-info">
                 <p className="hotel-address">{address}</p>
                 <h4 className="hotel-name">{name}</h4>
-                <p className="hotel-price">{price} XOF par nuit</p>
+                <p className="hotel-price">{price} FCF par nuit</p>
             </div>
         </div>
     );
