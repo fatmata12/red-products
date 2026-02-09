@@ -7,6 +7,8 @@ import hotel3 from "../assets/images/hotel3.jpg";
 import hotel4 from "../assets/images/hotel4.jpg";
 import hotel5 from "../assets/images/hotel5.jpg";
 import hotel6 from "../assets/images/hotel6.jpg";
+import hotel7 from "../assets/images/hotel7.jpg";
+import hotel8 from "../assets/images/hotel8.jpg";
 
 
 
@@ -17,6 +19,10 @@ const hotelsData = [
   { name: "Hôtel Radisson", address: "Dakar", price: 22000, images: hotel4 },
   { name: "Hôtel Saly", address: "Mbour", price: 35000, images: hotel5 },
   { name: "Hôtel Radisson", address: "Diamniadio", price: 30000, images: hotel6 },
+   { name: "Teeru Bi", address: "Mamelle", price: 55000, images: hotel5 },
+  { name: "Dakar Teranga", address: "Dakar", price: 30000, images: hotel6 },
+    
+  
  
  
 ];
