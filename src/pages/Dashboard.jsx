@@ -7,7 +7,7 @@ import {
   AiOutlineHome,
   AiOutlineDatabase
 } from "react-icons/ai";
-import "./Dashboard.css";
+import "./Dashboard.css"; // fichier CSS pour le style
 
 function Dashboard() {
   return (
