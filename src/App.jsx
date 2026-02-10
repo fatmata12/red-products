@@ -1,40 +1,56 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { useState } from "react";
-import Dashboard from "./pages/Dashboard";
-import Hotels from "./pages/Hotels";
-import Sidebar from "./components/Sidebar";
-import Login from "./pages/Login";
+import "./App.css";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // état connexion
-
   return (
-    <Router>
-      <Routes>
-        {/* Route login */}
-        <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+    <div className="layout">
 
-        {/* Routes protégées */}
-        <Route
-          path="/*"
-          element={
-            isLoggedIn ? (
-              <div style={{ display: "flex" }}>
-                <Sidebar />
-                <div style={{ flex: 1, padding: "20px" }}>
-                  <Routes>
-                    <Route path="/" element={<Dashboard />} />
-                    <Route path="hotels" element={<Hotels />} />
-                  </Routes>
-                </div>
-              </div>
-            ) : (
-              <Navigate to="/login" /> // redirige si pas connecté
-            )
-          }
-        />
-      </Routes>
-    </Router>
+      {/* SIDEBAR */}
+      <aside className="sidebar">
+        <h2>Principal</h2>
+        <ul>
+          <li>Dashboard</li>
+          <li>Liste des hôtels</li>
+        </ul>
+      </aside>
+
+      {/* CONTENU */}
+      <main className="content">
+        <div className="cards">
+
+          <div className="card">
+            <p>Formulaires</p>
+            <strong>125</strong>
+          </div>
+
+          <div className="card">
+            <p>Messages</p>
+            <strong>40</strong>
+          </div>
+
+          <div className="card">
+            <p>Emails</p>
+            <strong>25</strong>
+          </div>
+
+          <div className="card">
+            <p>Hôtels</p>
+            <strong>40</strong>
+          </div>
+
+          <div className="card">
+            <p>Utilisateurs</p>
+            <strong>600</strong>
+          </div>
+
+          <div className="card">
+            <p>Entités</p>
+            <strong>02</strong>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
   );
 }
 
