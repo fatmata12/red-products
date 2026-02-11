@@ -1,70 +1,25 @@
-import { useState } from "react";
-import { FaBars, FaFileAlt, FaEnvelope, FaComments, FaHotel, FaUsers, FaBuilding } from "react-icons/fa";
-import "./dashboard.css";
+import StatCard from "../components/StatCard";
+import {
+  AiOutlineFile,
+  AiOutlineMessage,
+  AiOutlineUser,
+  AiOutlineMail,
+  AiOutlineHome,
+  AiOutlineDatabase
+} from "react-icons/ai";
+import "./Dashboard.css"; // fichier CSS pour le style
 
-export default function Dashboard() {
-  const [isOpen, setIsOpen] = useState(true);
-
+function Dashboard() {
   return (
-    <div className="layout">
-
-      {/* SIDEBAR */}
-      <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
-        <h2 className="logo">PRODUIT ROUGE</h2>
-        <ul>
-          <li>Tableau de bord</li>
-          <li>Liste des hotels</li>
-        </ul>
-      </div>
-
-      {/* MAIN */}
-      <div className={`main ${isOpen ? "shifted" : ""}`}>
-
-        {/* HAMBURGER */}
-        <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-          <FaBars />
-        </button>
-
-        <div className="cards">
-
-          <div className="card purple">
-            <FaFileAlt />
-            <h3>FORMULAIRES</h3>
-            <p>125</p>
-          </div>
-
-          <div className="card green">
-            <FaComments />
-            <h3>MESSAGES</h3>
-            <p>40</p>
-          </div>
-
-          <div className="card red">
-            <FaEnvelope />
-            <h3>EMAILS</h3>
-            <p>25</p>
-          </div>
-
-          <div className="card violet">
-            <FaHotel />
-            <h3>HÔTELS</h3>
-            <p>40</p>
-          </div>
-
-          <div className="card orange">
-            <FaUsers />
-            <h3>UTILISATEURS</h3>
-            <p>600</p>
-          </div>
-
-          <div className="card blue">
-            <FaBuilding />
-            <h3>ENTITÉS</h3>
-            <p>02</p>
-          </div>
-
-        </div>
-      </div>
+    <div className="stats">
+      <StatCard title="Formulaires" value="125" color="#9c27b0" icon={<AiOutlineFile />} />
+      <StatCard title="Messages" value="40" color="#4caf50" icon={<AiOutlineMessage />} />
+      <StatCard title="Emails" value="25" color="#f44336" icon={<AiOutlineMail />} />
+      <StatCard title="Hôtels" value="40" color="#9c27b0" icon={<AiOutlineHome />} />
+      <StatCard title="Utilisateurs" value="600" color="#ff9800" icon={<AiOutlineUser />} />
+      <StatCard title="Entités" value="02" color="#2196f3" icon={<AiOutlineDatabase />} />
     </div>
   );
 }
+
+export default Dashboard;

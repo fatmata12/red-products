@@ -42,10 +42,11 @@ function Sidebar() {
 
         
 
-        <div className="user">
-          <p>fatoumata camara</p>
-          <span>● en ligne</span>
-        </div>
+        <div className="sidebar-footer">
+  <p className="user-name">Fatoumata Camara</p>
+  <span className="status">● En ligne</span>
+</div>
+
       </div>
 
       {/* Styles */}

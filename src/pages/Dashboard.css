@@ -1,90 +1,15 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f9;
-}
-
-.layout {
-  display: flex;
-}
-
-/* SIDEBAR */
-.sidebar {
-  width: 250px;
-  height: 100vh;
-  background: #1e1e2f;
-  color: white;
-  position: fixed;
-  left: 0;
-  top: 0;
-  transition: width 0.3s ease;
+.stats {
+  display: flex;              /* horizontal par défaut */
+  flex-wrap: wrap;            /* permet de passer à la ligne si nécessaire */
+  gap: 20px;                  /* espace entre les cartes */
   padding: 20px;
+  justify-content: flex-start; /* alignement des cartes sur la gauche */
 }
 
-.sidebar.closed {
-  width: 70px;
+/* Media query pour les écrans plus petits */
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;   /* cartes empilées verticalement */
+    gap: 15px;
+  }
 }
-
-.logo {
-  margin-bottom: 40px;
-}
-
-/* MAIN */
-.main {
-  margin-left: 250px;
-  width: 100%;
-  padding: 30px;
-  transition: margin-left 0.3s ease;
-}
-
-.main.shifted {
-  margin-left: 70px;
-}
-
-/* HAMBURGER */
-.hamburger {
-  font-size: 22px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-bottom: 30px;
-}
-
-/* CARDS */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  text-align: center;
-}
-
-.card svg {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.card h3 {
-  margin: 10px 0;
-  font-size: 14px;
-  color: #555;
-}
-
-.card p {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-/* COLORS */
-.purple svg { color: purple; }
-.green svg { color: green; }
-.red svg { color: red; }
-.violet svg { color: violet; }
-.orange svg { color: orange; }
-.blue svg { color: blue; }
