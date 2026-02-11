@@ -42,12 +42,12 @@ function Login({ setIsLoggedIn }) {
         style={{
           display: "flex",
           flexDirection: "column",
-          gap: "10px",
-          width: "150px",
-          padding: "25px",
+          gap: "15px",
+          width: "350px",
+          padding: "30px",
           backgroundColor: "#ffffff",
-          borderRadius: "2px",
-          boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
+          borderRadius: "4px",
+          boxShadow: "0 8px 25px rgba(0,0,0,0.4)",
         }  }
    >
         <input
