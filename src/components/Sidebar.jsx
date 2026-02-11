@@ -42,10 +42,24 @@ function Sidebar() {
 
         
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div className="sidebar-footer">
   <p className="user-name">Fatoumata Camara</p>
   <span className="status">● En ligne</span>
 </div>
+
 
       </div>
 
