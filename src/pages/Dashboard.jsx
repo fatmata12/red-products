@@ -1,25 +1,36 @@
-import StatCard from "../components/StatCard";
-import {
-  AiOutlineFile,
-  AiOutlineMessage,
-  AiOutlineUser,
-  AiOutlineMail,
-  AiOutlineHome,
-  AiOutlineDatabase
-} from "react-icons/ai";
-import "./Dashboard.css"; // fichier CSS pour le style
+import { useState } from "react";
+import { FaBars } from "react-icons/fa";
+import "./dashboard.css";
 
-function Dashboard() {
+export default function Dashboard() {
+  const [isOpen, setIsOpen] = useState(true);
+
   return (
-    <div className="stats">
-      <StatCard title="Formulaires" value="125" color="#9c27b0" icon={<AiOutlineFile />} />
-      <StatCard title="Messages" value="40" color="#4caf50" icon={<AiOutlineMessage />} />
-      <StatCard title="Emails" value="25" color="#f44336" icon={<AiOutlineMail />} />
-      <StatCard title="Hôtels" value="40" color="#9c27b0" icon={<AiOutlineHome />} />
-      <StatCard title="Utilisateurs" value="600" color="#ff9800" icon={<AiOutlineUser />} />
-      <StatCard title="Entités" value="02" color="#2196f3" icon={<AiOutlineDatabase />} />
+    <div className="layout">
+
+      {/* Sidebar */}
+      <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
+        <h2 className="logo">PRODUIT ROUGE</h2>
+        <ul>
+          <li>Tableau de bord</li>
+          <li>Liste des hôtels</li>
+        </ul>
+      </div>
+
+      {/* Main */}
+      <div className={`main ${isOpen ? "shifted" : ""}`}>
+        
+        {/* Hamburger */}
+        <button 
+          className="hamburger"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <FaBars />
+        </button>
+
+        <h1>Dashboard</h1>
+
+      </div>
     </div>
   );
 }
-
-export default Dashboard;
