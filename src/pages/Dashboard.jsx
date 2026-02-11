@@ -1,4 +1,7 @@
 import StatCard from "../components/StatCard";
+import { useState } from "react";
+import { FaBars } from "react-icons/fa";
+import "./dashboard.css";
 import {
   AiOutlineFile,
   AiOutlineMessage,
