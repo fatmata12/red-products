@@ -26,7 +26,7 @@ function Sidebar() {
               className="sidebar-link"
               onClick={() => setOpen(false)}
             >
-              Tableau de bord
+              <p>Tableau de bord</p>
             </Link>
           </li>
           <li>
@@ -35,7 +35,7 @@ function Sidebar() {
               className="sidebar-link"
               onClick={() => setOpen(false)}
             >
-              Liste des hôtels
+              <p>Liste des hotels</p>
             </Link>
           </li>
         </ul>
